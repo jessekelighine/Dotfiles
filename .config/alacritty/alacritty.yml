@@ -1,0 +1,89 @@
+# Window Settings
+window:
+  dimensions:
+    columns: 120
+    lines: 36
+  padding:
+    x: 0
+    y: 0
+  decorations: none
+scrolling:
+  history: 10000
+  multiplier: 3
+background_opacity: .97
+window.dynamic_title: true
+
+# Font Settings
+font:
+  normal:
+    family: IBM Plex Mono
+    style: Light
+  bold:
+    family: IBM Plex Mono
+    style: Bold
+  italic:
+    family: IBM Plex Mono
+    style: Italic
+  size: 20
+  offset:
+    x: -1
+    # x: 0 # TOGGLE_CHARACTER_SPACING
+    y: -3 
+  glyph_offset:
+    x: 0 
+    y: 0
+  use_thin_strokes: true
+  debug:
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
+
+# Colors (Gruvbox dark)
+colors:
+  primary:
+    background: '#1d2021'
+    foreground: '#ebdbb2'
+  normal:
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
+  indexed_colors:
+    - { index: 16, color: '0xdc9656' }
+    - { index: 17, color: '0xa16946' }
+    - { index: 18, color: '0x282828' }
+    - { index: 19, color: '0x383838' }
+    - { index: 20, color: '0xb8b8b8' }
+    - { index: 21, color: '0xe8e8e8' }
+
+  selection:
+    text: '0xffffff'
+    background: '0xFFAF00'
+    white: '0xffffff'
+  cursor:
+    style: Block
+    unfocused_hollow: true
+    cursor: '0x555555'
+    text: '0xffffff'
+
+mouse:
+  hide_when_typing: true
+
+key_bindings:
+  - { key: Back,  action: ReceiveChar}
+  # - { key: Right, action: ReceiveChar} # TOGGLE_ARROW_KEYS
+  # - { key: Left,  action: ReceiveChar} # TOGGLE_ARROW_KEYS
+  # - { key: Down,  action: ReceiveChar} # TOGGLE_ARROW_KEYS
+  # - { key: Up,    action: ReceiveChar} # TOGGLE_ARROW_KEYS
