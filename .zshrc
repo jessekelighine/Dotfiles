@@ -21,9 +21,6 @@ PATH=/usr/local/texlive/2021/bin/universal-darwin:"${PATH}"
 alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
 alias dotf='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 
-# Alias for merging files
-alias mergf='git merge-file'
-
 # merge two files
 mergef() {
 	local ext
