@@ -22,7 +22,7 @@ alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
 alias dotf='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 
 # merge two files
-mergef() {
+mergefile() {
 	local ext
 	[ $# -ne 2 ] && echo "Error: Need exactly two args." && return 1
 	[[ ! -r $1 || ! -r $2 ]] && echo "Error: One of the files is not readable." && return 1
