@@ -31,10 +31,6 @@ mergefile() {
 		ext=.${1##*.}
 	fi
 	touch tmp$ext # use empty file as the 'root' of the merge
-	# cp $1 backup$ext
 	git merge-file $1 tmp$ext $2 # will write to file 1
-	# mv $1 merge$ext
-	# mv backup$ext $1
 	rm tmp$ext
-	# echo "Files merged into \"merge$ext\"."
 }

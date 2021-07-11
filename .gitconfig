@@ -1,0 +1,9 @@
+[user]
+	email = jessekelighine@gmail.com
+	name = jessekelighine
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[http]
+	version = HTTP/1.1

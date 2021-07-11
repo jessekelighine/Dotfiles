@@ -75,8 +75,8 @@ colors:
   cursor:
     style: Block
     unfocused_hollow: true
-    cursor: '0x555555'
-    text: '0xffffff'
+    cursor: '0xffffff'
+    text: '0x333333'
 
 mouse:
   hide_when_typing: true
@@ -87,3 +87,7 @@ key_bindings:
   # - { key: Left,  action: ReceiveChar} # TOGGLE_ARROW_KEYS
   # - { key: Down,  action: ReceiveChar} # TOGGLE_ARROW_KEYS
   # - { key: Up,    action: ReceiveChar} # TOGGLE_ARROW_KEYS
+
+# spawn a new instance of alacritty
+action:
+  - { key: N, mods: Command, action: SpawnNewInstance }

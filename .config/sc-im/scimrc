@@ -1,0 +1,7 @@
+# set numeric
+set numeric_decimal=0
+set overlap
+
+set default_copy_to_clipboard_cmd="pbcopy <"
+set autocalc
+set xlsx_readformulas
