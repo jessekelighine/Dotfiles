@@ -1,5 +1,6 @@
 # ~/.zshrc
 
+# minimal prompt
 PROMPT='%B%F{196}%1~%f%b %# '
 
 # use vim keybindings in terminal
@@ -21,6 +22,9 @@ PATH=/usr/local/texlive/2021/bin/universal-darwin:"${PATH}"
 alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
 alias dotf='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 
+# youtube-dl
+alias 'youtube-audio'='youtube-dl -f bestaudio -o "~/Desktop/%(creator)s - %(title)s.mp3"'
+
 # merge two files
 mergefile() {
 	local ext
@@ -30,7 +34,7 @@ mergefile() {
 		[ ${1##*.} != ${2##*.} ] && echo "Error: Files must have same extension." && return 1
 		ext=.${1##*.}
 	fi
-	touch tmp$ext # use empty file as the 'root' of the merge
-	git merge-file $1 tmp$ext $2 # will write to file 1
-	rm tmp$ext
+	touch thisisjustatemporaryfile$ext # use empty file as the 'root' of the merge
+	git merge-file $1 thisisjustatemporaryfile$ext $2 # will write to file 1
+	rm thisisjustatemporaryfile$ext
 }

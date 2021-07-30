@@ -76,7 +76,7 @@ colors:
     style: Block
     unfocused_hollow: true
     cursor: '0xffffff'
-    text: '0x333333'
+    text: '0x000000'
 
 mouse:
   hide_when_typing: true
