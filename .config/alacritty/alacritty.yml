@@ -1,3 +1,5 @@
+# ~/.config/alacritty/alacritty.yml
+
 # Window Settings
 window:
   dimensions:
@@ -27,7 +29,6 @@ font:
   size: 20
   offset:
     x: -1
-    # x: 0 # TOGGLE_CHARACTER_SPACING
     y: -3 
   glyph_offset:
     x: 0 

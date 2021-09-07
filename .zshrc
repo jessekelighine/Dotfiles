@@ -3,38 +3,29 @@
 # minimal prompt
 PROMPT='%B%F{196}%1~%f%b %# '
 
+# auto change directory
+setopt autocd
+
 # use vim keybindings in terminal
 set -o vi
+
+alias la='ls -lA'
+alias vim='/usr/local/bin/vim'
+alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
+alias dotf='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
+alias utopia='cd /Volumes/UTOPIA/'
+alias 'update-hosts'='zsh ~/.config/miscellaneous/update_hosts.zsh'
+alias 'youtube-audio'='youtube-dl -f bestaudio -o "~/Desktop/%(creator)s-%(title)s.mp3"'
+alias 'waste-time'='zsh ~/.config/miscellaneous/productivity.zsh'
 
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 export FZF_DEFAULT_OPTS='--layout=reverse --info=inline --extended'
 
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULES=ibus
+# export GTK_IM_MODULE=ibus
+# export XMODIFIERS=@im=ibus
+# export QT_IM_MODULES=ibus
 
 # for texlive (latex)
 PATH=/usr/local/texlive/2021/bin/universal-darwin:"${PATH}"
-
-# Alias for managing (vim)-dotfiles
-alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
-alias dotf='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
-
-# youtube-dl
-alias 'youtube-audio'='youtube-dl -f bestaudio -o "~/Desktop/%(creator)s - %(title)s.mp3"'
-
-# merge two files
-mergefile() {
-	local ext
-	[ $# -ne 2 ] && echo "Error: Need exactly two args." && return 1
-	[[ ! -r $1 || ! -r $2 ]] && echo "Error: One of the files is not readable." && return 1
-	if [[ ${1##*/} =~ '.' || ${2##*/} =~ '.' ]]; then
-		[ ${1##*.} != ${2##*.} ] && echo "Error: Files must have same extension." && return 1
-		ext=.${1##*.}
-	fi
-	touch thisisjustatemporaryfile$ext # use empty file as the 'root' of the merge
-	git merge-file $1 thisisjustatemporaryfile$ext $2 # will write to file 1
-	rm thisisjustatemporaryfile$ext
-}

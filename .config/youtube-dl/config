@@ -1,8 +1,5 @@
 # ~/.config/youtube-dl/config
 
-# [repo](https://github.com/ytdl-org/youtube-dl)
-# Example: youtube-dl -f bestaudio "<SOME_URL>" -o '%(creator)s-%(title)s.mp3'
-
 # export youtube-audio=youtube-dl -f bestaudio "<SOME_URL>" -o '~/Desktop/%(creator)s - %(title)s.mp3'
 
 # extract the best audio
