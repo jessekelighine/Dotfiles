@@ -43,3 +43,15 @@ python@3.8
 rename
 ripgrep
 vim
+fd
+ffmpeg
+gdrive
+git
+imagemagick
+neovim
+pandoc
+poppler
+python@3.8
+rename
+ripgrep
+vim

@@ -13,6 +13,7 @@ scrolling:
   history: 10000
   multiplier: 3
 background_opacity: .97
+# background_opacity: .8
 window.dynamic_title: true
 
 # Font Settings
@@ -25,7 +26,7 @@ font:
     style: Bold
   italic:
     family: IBM Plex Mono
-    style: Italic
+    style: Light Italic
   size: 20
   offset:
     x: -1

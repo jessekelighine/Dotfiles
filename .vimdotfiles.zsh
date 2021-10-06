@@ -1,5 +1,6 @@
 #!/bin/zsh
 # ~/.vimdotfiles
+# git access token (valid from 2021-Sep-08 to 2021-Dec-06): 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
 
 alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
 
@@ -13,6 +14,7 @@ vimd add ~/.vim/after
 vimd add ~/.vim/ftplugin
 vimd add ~/.vim/syntax
 vimd add ~/.vim/misc
+vimd add ~/.vim/autoload
 
 vimd add ~/.vim/spell/en.utf-8.add
 vimd add ~/.vim/spell/latex.utf-8.add
