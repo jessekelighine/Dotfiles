@@ -1,6 +1,7 @@
 #!/bin/zsh
-# ~/.vimdotfiles
+# ~/.vimdotfiles.zsh
 # git access token (valid from 2021-Sep-08 to 2021-Dec-06): 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
+# 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
 
 alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
 

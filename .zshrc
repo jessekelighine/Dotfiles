@@ -10,9 +10,14 @@ setopt autocd
 set -o vi
 
 alias la='ls -lA'
+alias lad='ls -lA | grep "^d"'
+
 alias vim='/usr/local/bin/vim'
+
+# dotfiles git repo
 alias vimd='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
 alias dotf='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
+
 alias utopia='cd /Volumes/UTOPIA/'
 
 alias 'update-hosts'='zsh ~/.config/miscellaneous/update_hosts.zsh'
@@ -22,6 +27,12 @@ alias 'waste-time'='zsh ~/.config/miscellaneous/productivity.zsh'
 
 alias matlab="/Applications/MATLAB_R2021b.app/bin/matlab -nodesktop -nodisplay -nosplash"
 # matlab -nodisplay -nosplash -nodesktop 2> >(grep -v CoreText) -r "run('question01.m');exit;" 
+
+# alias 'play-list'='mpv --vo=null --video=no --no-video --term-osd-bar --no-resume-playback --shuffle'
+# alias 'play-single'='mpv --loop --'
+
+# merge pdf files.
+# alias 'merge-pdf'='gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=combine.pdf -dBATCH 1.pdf 2.pdf'
 
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

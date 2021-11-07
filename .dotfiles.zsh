@@ -16,6 +16,10 @@ dotf add ~/.config/ffmpeg
 dotf add ~/.config/youtube-dl
 dotf add ~/.config/zathura
 dotf add ~/.config/miscellaneous/
+dotf add ~/.config/mpv/
+dotf add ~/.config/zathura/
+dotf add ~/.config/youtube-dl/
+dotf add ~/.config/mpv/
 
 dotf add ~/.zshrc
 dotf add ~/.bash_profile

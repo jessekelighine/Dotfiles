@@ -5,6 +5,8 @@ window:
   dimensions:
     columns: 120
     lines: 36
+    # columns: 150
+    # lines: 41
   padding:
     x: 0
     y: 0
@@ -28,6 +30,7 @@ font:
     family: IBM Plex Mono
     style: Light Italic
   size: 20
+  # size: 18
   offset:
     x: -1
     y: -3 
