@@ -83,3 +83,17 @@ python@3.8
 rename
 ripgrep
 vim
+fd
+gdrive
+git
+imagemagick
+libproxy
+mpv
+neovim
+nghttp2
+pandoc
+poppler
+python@3.8
+rename
+ripgrep
+vim

@@ -3,10 +3,10 @@
 # Window Settings
 window:
   dimensions:
-    columns: 120
-    lines: 36
-    # columns: 150
-    # lines: 41
+    # columns: 120
+    # lines: 36
+    columns: 155
+    lines: 42
   padding:
     x: 0
     y: 0
@@ -14,7 +14,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: .97
+background_opacity: .92
 # background_opacity: .8
 window.dynamic_title: true
 
@@ -29,13 +29,12 @@ font:
   italic:
     family: IBM Plex Mono
     style: Light Italic
-  size: 20
-  # size: 18
+  size: 18
   offset:
     x: -1
-    y: -3 
+    y: -3
   glyph_offset:
-    x: 0 
+    x: 0
     y: 0
   use_thin_strokes: true
   debug:
@@ -72,7 +71,6 @@ colors:
     - { index: 19, color: '0x383838' }
     - { index: 20, color: '0xb8b8b8' }
     - { index: 21, color: '0xe8e8e8' }
-
   selection:
     text: '0xffffff'
     background: '0xFFAF00'

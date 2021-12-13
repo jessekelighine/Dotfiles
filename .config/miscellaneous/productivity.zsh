@@ -3,7 +3,7 @@
 HOSTS=/etc/hosts
 UNBLOCKED=$(grep '^# # PRODUCTIVITY {{{$' $HOSTS)
 MESS_1=" * Shutting down time wasting websites. Sei produktiv!"
-BROWSER=Safari
+BROWSER=Firefox
 COMMAND1='call search("^\\(# \\)\\{1,2}PRODUCTIVITY {{{$", "e") | exe "norm '
 COMMAND2='" | x'
 
@@ -14,9 +14,9 @@ function toggle_n_kill() {
 		NORM='V%0o0\<C-V>lx'
 	fi
 	sudo vim +${COMMAND1}$NORM${COMMAND2} $HOSTS
-	killall Safari 2> /dev/null
+	killall $BROWSER 2> /dev/null
 	sleep 1
-	open -a $BROWSER
+	# open -a $BROWSER
 }
 
 if [[ ! -z $1 ]]; then
@@ -33,11 +33,6 @@ fi
 if [ -z $UNBLOCKED ]; then
 	echo ""
 	echo "You are about to UNBLOCK some time wasting websites!"
-	echo "If you just want to take a break, you could..."
-	echo "\t- listen to a podcast"
-	echo "\t- read some German."
-	echo "\t- check your TODO list."
-	echo "Think about your future before you toggle this..."
 	echo ""
 else
 	echo "\n"$MESS_1"\n"
