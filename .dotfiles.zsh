@@ -3,8 +3,7 @@
 
 alias dotf='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 
-touch ~/.brew_packages_list.txt
-brew leaves >> ~/.brew_packages_list.txt
+brew leaves > ~/.brew_packages_list.txt
 dotf add ~/.brew_packages_list.txt
 
 dotf add ~/.fzf.zsh
@@ -16,9 +15,6 @@ dotf add ~/.config/ffmpeg
 dotf add ~/.config/youtube-dl
 dotf add ~/.config/zathura
 dotf add ~/.config/miscellaneous/
-dotf add ~/.config/mpv/
-dotf add ~/.config/zathura/
-dotf add ~/.config/youtube-dl/
 dotf add ~/.config/mpv/
 
 dotf add ~/.zshrc

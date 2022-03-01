@@ -47,3 +47,4 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 export PATH
 
 export PS1="\[\e[38;5;198;48;5;234m\] \W $ \[\e[0m\]"
+. "$HOME/.cargo/env"
