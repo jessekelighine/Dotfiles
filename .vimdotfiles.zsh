@@ -20,7 +20,6 @@ vimd add ~/.vim/syntax
 
 vimd add ~/.vim/filetype.vim
 vimd add ~/.vim/notes.md
-vimd add ~/.vim/coc-settings.json
 
 vimd add ~/.vimrc
 vimd add ~/.gvimrc
