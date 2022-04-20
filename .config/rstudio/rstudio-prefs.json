@@ -1,0 +1,14 @@
+{
+    "show_margin": false,
+    "default_project_location": "~",
+    "pdf_previewer": "rstudio",
+    "wrap_tab_navigation": false,
+    "reuse_sessions_for_project_links": true,
+    "terminal_path": "/Users/jessechen",
+    "editor_theme": "Material",
+    "posix_terminal_shell": "bash",
+    "editor_keybindings": "vim",
+    "document_author": "b06303009",
+    "jobs_tab_visibility": "shown",
+    "font_size_points": 11
+}
