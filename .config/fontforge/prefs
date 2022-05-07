@@ -7,6 +7,7 @@ AutoSaveFrequency:	5
 RevisionsToRetain:	0
 UndoRedoLimitToSave:	0
 WarnScriptUnsaved:	0
+UsePlugins:	1
 NewCharset:	ISO8859-1
 NewEmSize:	1000
 NewFontsQuadratic:	0
@@ -153,10 +154,11 @@ CV_B2Tool:	1
 CV_CB2Tool:	5
 XUID-Base:	1021 609 889743888
 ShowKerningPane:	1
+PluginStartupMode:	Ask
+Recent:	/Users/jessechen/Fonts/GenWanMinTJ/GenWanMinTW-L.sfd
 Recent:	/Users/jessechen/Fonts/I.Ming-7.01/7.01-TeX/I.Ming-Regular.sfd
 Recent:	/Users/jessechen/Untitled1.sfd
 Recent:	/Users/jessechen/Fonts/I.Ming-7.01/7.01-TeX/I.MingVar-Regular.sfd
-Recent:	/Users/jessechen/Fonts/GenWanMinTJ/GenWanMinTW-L.sfd
 Recent:	/Users/jessechen/Fonts/Cormorant_Garamond/CormorantGaramond-Regular.sfd
 Recent:	/Users/jessechen/Fonts/GenWanMin_test/new/GenWanMinTW-L.sfd
 Recent:	/Users/jessechen/Fonts/GenWanMin_test/GenWanMin-L.ttc(GenWanMin JP L)

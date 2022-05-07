@@ -1,12 +1,9 @@
 #!/usr/bin/zsh
 
-alias dotf='git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
+source ~/.zshrc
 
-brew leaves > ~/.brew_packages_list.txt
+brew list > ~/.brew_packages_list.txt
 dotf add ~/.brew_packages_list.txt
-
-dotf add ~/.fzf.zsh
-dotf add ~/.fzf.bash
 
 dotf add ~/.config/alacritty
 dotf add ~/.config/configstore
@@ -30,6 +27,8 @@ dotf add ~/.gitconfig
 dotf add ~/.gdrive/notes.md
 dotf add ~/.Bookmarks.md
 dotf add ~/.tmux.conf
+dotf add ~/.fzf.zsh
+dotf add ~/.fzf.bash
+dotf add ~/.zsh
 
 dotf add ~/.dotfiles.zsh
-dotf add ~/.vimdotfiles.zsh

@@ -9,7 +9,10 @@ export LSCOLORS='exfxcxdxbxegedabagacad'
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 # PROMPT='%B%F{196}%1~%f%b %# '
 setopt autocd
+
 set -o vi
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/up/up.zsh
 
 ### Aliases ###################################################################
 
@@ -19,14 +22,14 @@ alias 'lad'='ls -lAhG | grep "^d"'
 alias 'mkdir'='mkdir -pv'
 
 # alias 'vim'='/usr/local/bin/vim'
-alias 'vim'='/usr/local/bin/nvim'
 alias 'macvim'='open -a macvim'
+alias 'vim'='/usr/local/bin/nvim'
 
-alias 'vimd'='/usr/bin/git --git-dir=$HOME/VimDotfiles/ --work-tree=$HOME'
 alias 'dotf'='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 
 # alias 'julia'='/Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia'
 alias 'matlab'="/Applications/MATLAB_R2021b.app/bin/matlab -nodesktop -nodisplay -nosplash"
+alias 'iterm'='open -a iTerm'
 
 alias 'todo'='vim ~/Courses/TODO.md'
 alias 'update-hosts'='zsh ~/.config/miscellaneous/update_hosts.zsh'
@@ -34,9 +37,6 @@ alias 'youtube-audio'='youtube-dl -f bestaudio -o "~/Desktop/%(creator)s-%(title
 alias 'waste-time'='zsh ~/.config/miscellaneous/productivity.zsh'
 alias 'print-colors'='bash ~/.config/miscellaneous/print_colors.sh'
 alias md5sum='md5 -r'
-
-alias 'utopia'='cd /Volumes/UTOPIA/'
-alias 'utopie'='cd /Volumes/UTOPIE/'
 
 # alias 'play-list'='mpv --vo=null --video=no --no-video --term-osd-bar --no-resume-playback --shuffle'
 # alias 'play-single'='mpv --loop'
@@ -66,6 +66,7 @@ PATH=/usr/local/MATLAB/R2010b/bin/:"${PATH}"
 function timeout() { perl -e 'alarm shift; exec @ARGV' "$@"; }
 function cwtex()   { python3 /usr/local/texlive/texmf-local/bin/cwtex51b.py $1; pdflatex $(echo $1 | sed -E 's/\.ctx$/.tex/g') }
 function joinpdf() { gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$1 "$@" }
+function del()     { mv "$@" ~/.Trash }
 function unmount() {
 	[[ "$1" == "" ]] && {
 		diskutil list external
@@ -77,6 +78,14 @@ function unmount() {
 		return -2
 	}
 	diskutil eject "$disk"
+}
+function volume() {
+	[[ "$1" == "" ]] && {
+		ls -lAhG /Volumes
+		cd /Volumes
+		return 0
+	}
+	cd /Volumes/"$1"
 }
 
 ### sdcv ######################################################################
