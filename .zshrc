@@ -10,9 +10,12 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_co
 # PROMPT='%B%F{196}%1~%f%b %# '
 setopt autocd
 
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
 set -o vi
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.config/up/up.zsh
+source ~/.zsh/up/up.zsh
 
 ### Aliases ###################################################################
 
@@ -67,7 +70,7 @@ function timeout() { perl -e 'alarm shift; exec @ARGV' "$@"; }
 function cwtex()   { python3 /usr/local/texlive/texmf-local/bin/cwtex51b.py $1; pdflatex $(echo $1 | sed -E 's/\.ctx$/.tex/g') }
 function joinpdf() { gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$1 "$@" }
 function del()     { mv "$@" ~/.Trash }
-function unmount() {
+function eject() {
 	[[ "$1" == "" ]] && {
 		diskutil list external
 		return -1
@@ -87,6 +90,7 @@ function volume() {
 	}
 	cd /Volumes/"$1"
 }
+# function mk
 
 ### sdcv ######################################################################
 
